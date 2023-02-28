@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--DI through Constructors Injection For Collections -->
+
+	<bean class="com.springcore.coll.Customer" name="cust">
+		<constructor-arg value="abc" />
+		<constructor-arg>
+			<array>
+				<value>book1</value>
+				<value>book2</value>
+				<value>book3</value>
+				<value>book4</value>
+
+			</array>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>Chennai</value>
+				<value>Pune</value>
+				<value>Mumbai</value>
+				<value>Bangalore</value>
+			</list>
+
+		</constructor-arg>
+
+		<constructor-arg>
+			<map>
+				<entry key="Mobile" value="785469211" />
+				<entry key="Landline" value="0802548781" />
+			</map>
+		</constructor-arg>
+	</bean>
+
+</beans>

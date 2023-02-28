@@ -1,0 +1,8 @@
+package com.springcore;
+
+public class Calculate {
+
+	private int a;
+	private int b;
+	
+}

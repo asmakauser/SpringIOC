@@ -1,0 +1,41 @@
+
+
+import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * @author ASMA KAUSER
+ *
+ */
+public class App {
+	
+	public static void main(String[] args) {
+		final Logger logger = Logger.getLogger(App.class);
+		ApplicationContext context = new ClassPathXmlApplicationContext("collectionsconfig.xml");
+
+		logger.info("Dependency Injection Through Setters For Collection DataTypes");
+		Employee empValue = (Employee) context.getBean("emp");
+		
+		
+		logger.info("*********EMLPOYEE NAME***************");
+		logger.info(empValue.getName());
+		
+		
+		logger.info("*********EMPLOYEE PHONES************");
+		logger.info(empValue.getPhones());
+		
+
+		logger.info("*********EMPLOYEE ADDRESS***********");
+		logger.info(empValue.getAddress());
+		
+		
+
+		logger.info("*********EMPLOYEE COURSES***********");
+		logger.info(empValue.getCourses());
+		
+		logger.info("*********EMPLOYEE PROPS***********");
+		logger.info(empValue.getDetails());
+	}
+
+}
